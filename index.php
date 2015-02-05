@@ -14,5 +14,5 @@ $app=new cpApp($config);//实例化单一入口应用控制类
 //执行项目
 $app->run();
 echo microtime_float() - $begin_time;
-echo 'hello';
+echo 'hello!world!!';
 ?>
