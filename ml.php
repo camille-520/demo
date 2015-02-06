@@ -3,6 +3,9 @@ git 命令
 切换目录
 $ cd demo
 
+查看目录内的文件
+$ ls
+
 创建库
 $ mkdir demo
 
@@ -76,3 +79,6 @@ $ git remote add origin git@github.com:camille-520/demo.git
 $ git push -u origin master
 不为空时使用
 $ git push origin master
+
+克隆远程仓库到本地
+$ git clone git@github.com:camille-520/gitskills.git
