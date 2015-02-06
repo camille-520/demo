@@ -15,7 +15,7 @@ $app=new cpApp($config);//实例化单一入口应用控制类
 $app->run();
 echo microtime_float() - $begin_time;
 
-//Creating a new branch is quick and simple.
+//Creating a new branch is quick and simple abc.
 
 
 ?>
