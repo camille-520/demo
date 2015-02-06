@@ -27,7 +27,7 @@ $ git add.
 提交文件说明
 $ git commit -m "说明文字"
 
-显示文件是否改动
+显示文件是否改动/显示文件存在的冲突
 $ git status
 
 显示文件改动的内容和改动之前的内容
@@ -82,3 +82,27 @@ $ git push origin master
 
 克隆远程仓库到本地
 $ git clone git@github.com:camille-520/gitskills.git
+
+
+Git鼓励大量使用分支
+
+创建新分支dev
+$ git branch dev
+
+切换到dev
+$ git checkout dev
+
+创建新分支dev,并切换到dev
+$ git checkout -b dev
+
+查看所有分支,当前分支前面会有*号
+$ git branch
+
+合并指定分支dev到当前分支
+$ git merge dev
+
+删除分支dev
+$ git branch -d dev
+
+查看分支合并图
+$ git log --graph --pretty=oneline --abbrev-commit
