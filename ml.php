@@ -127,3 +127,18 @@ $ git stash drop
 恢复指定的存储工作stash@{0}
 $ git stash apply stash@{0}
 
+强行删除一个没合并的分支
+$ git branch -D feature-vulcan
+
+查看远程库信息
+$ git remote
+
+查看远程库详细信息
+$ git remote -v
+
+创建远程分支dev到本地
+$ git checkout -b dev origin/dev
+
+指定本地dev分支与远程origin/dev分支的链接,在pull,在push
+$ git branch --set-upstream dev origin/dev
+
