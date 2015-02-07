@@ -142,3 +142,57 @@ $ git checkout -b dev origin/dev
 指定本地dev分支与远程origin/dev分支的链接,在pull,在push
 $ git branch --set-upstream dev origin/dev
 
+给分支创建标签
+$ git tag v1.0
+
+查看标签
+$ git tag
+
+忘记打标签就提交了,可以查看历史提交的commit记录
+$ git log --pretty=oneline --abbrev-commit
+
+然后给指定的commit id打标签
+$ git tag v0.9 6222153
+
+给指定commit id 创建带有说明的标签
+$ git tag -a v0.2 -m "version 0.2" 6222153
+
+查看标签说明文字
+$ git show v0.2
+
+还可以通过-s用私钥签名一个标签
+$ git tag -s v0.2 -m "signed  version 0.2" fec156a
+
+查看私钥标签说明
+$ git show v0.2
+
+删除标签
+$ git tag -d v0.2
+
+推送某个标签到远程
+$ git push origin v0.2
+
+一次性推送全部为推送的标签
+$ git push origin --tags
+
+删除远程标签,先删除本地
+$ git tag -d v0.2
+$ git push origin :refs/tags/v0.2
+
+配置git 让文件名显示红色
+$ git config --global color.ui true
+
+*忽略某些文件时，需要在Git工作区的根目录下创建编写.gitignore
+把需要忽略的文件名写进去.并将.gitignore提交到git
+
+配置别名,例如:用st 表示status
+$ git config --global alias.st status
+
+配置显示最后一条提交信息的别名
+$ git config --global alias.last 'log -1'
+
+显示最后一条提交的信息
+$ git last
+
+删除别名:每个仓库的git的配置文件.git/config中[alias]后面
+每个用户的git的配置文件放在用户主目录下的一个隐藏文件.gitconfig中
