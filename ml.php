@@ -106,3 +106,24 @@ $ git branch -d dev
 
 查看分支合并图
 $ git log --graph --pretty=oneline --abbrev-commit
+
+强制禁用fast forward模式,git在merge时生成新的commit,用与查看历史分支
+$ git merge --no-ff -m "merge with no-ff" dev
+
+获取远程库
+$ git pull origin web:web
+
+存储工作现场
+$ git stash
+
+查看存储的工作
+$ git stash list
+
+恢复存储的工作并删除stash内容
+$ git stash pop
+or
+$ git stash drop
+
+恢复指定的存储工作stash@{0}
+$ git stash apply stash@{0}
+
